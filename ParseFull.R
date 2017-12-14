@@ -1,9 +1,9 @@
 library(R.matlab)
 library(caTools)
 
-setwd("~/Desktop/College/4.10/IEOR 142/Project/InitialDickingAround")
+setwd("~/Desktop/College/4.10/IEOR 142/Project/Final")
 
-full <- readMat('full_30_fs.mat')$full
+full <- readMat('full_60_w1_sample.mat')
 x = full[,1]
 y = full[,2]
 z = full[,3]
