@@ -1,7 +1,7 @@
 clear all
 
-vol = MatrixFromNii2('trial15_60_w1_volume_TRANS.nii'); % Change
-seg = MatrixFromNii2('trial15_60_w1_seg_TRANS.nii'); % Change
+vol = MatrixFromNii2('trial8_30_fs_volume_TRANS.nii'); % Change
+seg = MatrixFromNii2('trial8_30_fs_seg_ak5_lh4_TRANS4.nii'); % Change
 
 %% Find min and max x, y, z
 
@@ -108,7 +108,7 @@ for g = 1:max(Groups);
 end
 
 %% Save Sample
-name = 'full_60_w1'; % Change
+name = 'full_30_fs'; % Change
 save([name, '_sample.mat'], 'sample', '-mat', '-v6');
 
 % %% Save Full
