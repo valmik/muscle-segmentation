@@ -1,11 +1,3 @@
-library(rpart)
-library(caret)
-library(gbm)
-library(dplyr)
-library(ggplot2)
-library(GGally)
-library(ROCR)
-
 setwd("~/Desktop/College/4.10/IEOR 142/Project/Final")
 source("UtilityFunctions.R")
 
@@ -81,11 +73,16 @@ accuracy
 
 test$seg <- RFtypepred
 
-newseg = data.frame()
-newseg$x <- test$x
-y <- test$y
-z <- test$z
-seg <- test$seg
+newseg <- test
+newseg$intensity <- NULL
+newseg$pos_x <- NULL
+newseg$pos_y <- NULL
+newseg$pos_z <- NULL
+newseg$neg_x <- NULL
+newseg$neg_y <- NULL
+newseg$neg_z <- NULL
+newseg$color <- NULL
+newseg$angle <- NULL
+newseg$weight <- NULL
 
-writeMat('new_30_w1.mat', x=x, y=y, z=z, seg=seg)
 write.csv(newseg, file = 'new_30_w1.csv', row.names = FALSE)
